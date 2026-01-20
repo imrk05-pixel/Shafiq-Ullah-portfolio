@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Shafiq Ullah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#0ea5e9',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-dark text-white font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html"
+                        class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Portfolio.
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-all">Home</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-all">About</a>
+                        <a href="projects.html"
+                            class="text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="contact.html"
+                            class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-primary/30">Contact
+                            Me</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-dark border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-900">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">About</a>
+                <a href="projects.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-700">Projects</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary font-bold">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="min-h-screen pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4">My <span class="text-primary">Projects</span></h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto">Here are some of the projects I've worked on.
+                Each one was a step forward in my journey as a developer.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1 -->
+                <div
+                    class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-lg group">
+                    <div
+                        class="h-48 bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center text-6xl text-white/20 group-hover:text-white/40 transition-colors">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-gray-400 text-sm mb-4">A responsive personal portfolio website built with HTML,
+                            Tailwind CSS, and JavaScript.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-primary">HTML5</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-blue-400">Tailwind</span>
+                        </div>
+                        <a href="#"
+                            class="inline-block text-primary hover:text-white transition-colors font-medium">View
+                            Project <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div
+                    class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-lg group">
+                    <div
+                        class="h-48 bg-gradient-to-r from-blue-400 to-cyan-500 flex items-center justify-center text-6xl text-white/20 group-hover:text-white/40 transition-colors">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Manager</h3>
+                        <p class="text-gray-400 text-sm mb-4">A simple todo list application to manage daily tasks
+                            efficiently.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-yellow-400">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-blue-400">CSS3</span>
+                        </div>
+                        <a href="#"
+                            class="inline-block text-primary hover:text-white transition-colors font-medium">View
+                            Project <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 (Placeholder) -->
+                <div
+                    class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-lg group">
+                    <div
+                        class="h-48 bg-gradient-to-r from-emerald-400 to-green-500 flex items-center justify-center text-6xl text-white/20 group-hover:text-white/40 transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce UI</h3>
+                        <p class="text-gray-400 text-sm mb-4">A modern front-end design for an online store product
+                            page.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-sky-400">React</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-pink-400">Sass</span>
+                        </div>
+                        <a href="#"
+                            class="inline-block text-primary hover:text-white transition-colors font-medium">View
+                            Project <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

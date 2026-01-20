@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Shafiq Ullah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#0ea5e9',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-dark text-white font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html"
+                        class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Portfolio.
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-all">Home</a>
+                        <a href="about.html"
+                            class="text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="projects.html"
+                            class="text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-all">Projects</a>
+                        <a href="contact.html"
+                            class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-primary/30">Contact
+                            Me</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-dark border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900">About</a>
+                <a href="projects.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Projects</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary font-bold">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="min-h-screen pt-24 pb-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">About <span class="text-primary">Me</span></h2>
+
+            <div class="bg-gray-800/50 backdrop-blur rounded-2xl p-8 mb-12 shadow-xl border border-gray-700">
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    Hi, I'm Shafiq Ullah, a passionate Web Developer with a strong foundation in HTML, CSS, and
+                    JavaScript.
+                    I have a keen eye for design and a drive to build seamless digital experiences.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Currently, I'm expanding my skillset into the backend ecosystem. I'm actively learning
+                    <span class="text-secondary font-semibold">Node.js</span>, <span
+                        class="text-secondary font-semibold">Flask</span>,
+                    and <span class="text-secondary font-semibold">Django</span>, along with database technologies like
+                    SQL and NoSQL.
+                    My goal is to become a full-stack developer capable of building complex, scalable applications.
+                </p>
+            </div>
+
+            <!-- Education & Experience Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education -->
+                <div
+                    class="bg-gray-800/30 p-6 rounded-xl border border-gray-700 hover:border-primary/50 transition-colors">
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-primary"></i> Education
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="relative pl-6 border-l-2 border-gray-700">
+                            <span
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-dark"></span>
+                            <h4 class="font-bold text-lg">Web Development</h4>
+                            <p class="text-gray-400 text-sm">Self Taught & Courses</p>
+                            <p class="text-gray-500 text-sm mt-1">2024 - Present</p>
+                        </div>
+                        <!-- Add more education items here -->
+                    </div>
+                </div>
+
+                <!-- Future Goals -->
+                <div
+                    class="bg-gray-800/30 p-6 rounded-xl border border-gray-700 hover:border-secondary/50 transition-colors">
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fas fa-rocket text-secondary"></i> Future Goals
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-gray-300">
+                            <i class="fas fa-check-circle text-green-500"></i> Master React.js
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-300">
+                            <i class="fas fa-circle-notch text-blue-500 animate-spin-slow"></i> Build Full Stack Apps
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-300">
+                            <i class="fas fa-database text-yellow-500"></i> Database Architecture
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
